@@ -73,10 +73,103 @@ nav {
 .nav__social {
     font-size: .5em;
     position: relative;
-    top: 40%;
+    top: 10%;
     left: 50%;
-
     transform: translate(-50%, -50%)
+}
+
+
+
+.nav__logo {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    /* top:5%; */
+    left: 25%;
+    background: url("./img/logo.svg") no-repeat;
+    position: relative;
+    top: 0;
+}
+
+.nav__links {
+    position: relative;
+    top:-10%;
+    left:0;
+    }
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: var(--meat-brown);
+    font-size: 1.5em;
+}
+
+
+nav a.active {
+    background-color: black;
+    color: #ffffff;
+}
+
+nav,
+.hamburger,
+.cover {
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+footer {
+    font-size: 2vmin;
+    width: 225px;
+    position: absolute;
+    bottom: 1vmin;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--charcoal);
+}
+
+.hamburger {
+    font-size: .25em;
+    position: fixed;
+    z-index: 9999;
+    padding: 15px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.sidenav-active nav,
+.sidenav-active .cover {
+    -webkit-transform: translateX(225px);
+    -ms-transform: translateX(225px);
+    transform: translateX(225px);
+}
+
+.sidenav-active .hamburger {
+    -webkit-transform: translateX(180px);
+    -ms-transform: translateX(180px);
+    transform: translateX(180px);
+    color: #000000;
+
+}
+
+.main {
+    -webkit-transition: margin-left .3s;
+    transition: margin-left .3s;
+}
+
+.sidenav-active .main {
+    margin-left: var(225px);
 }
 
 /*MAIN*/
@@ -345,92 +438,7 @@ i {
     color: #ffffff;
 }
 
-/*NAVIGATION SIDE PANEL*/
 
-.nav__logo {
-    font-size: 3vw;
-    text-align: center;
-}
-
-.nav__links {
-    top: 50px;
-}
-
-nav a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 5px 0;
-}
-
-nav a:hover {
-    color: var(--meat-brown);
-    font-size: 1.5em;
-}
-
-
-nav a.active {
-    background-color: black;
-    color: #ffffff;
-}
-
-nav,
-.hamburger,
-.cover {
-    -webkit-transition: -webkit-transform .3s;
-    transition: transform .3s;
-}
-
-footer {
-    font-size: 2vmin;
-    width: 225px;
-    position: absolute;
-    bottom: 1vmin;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--charcoal);
-}
-
-.hamburger {
-    font-size: .25em;
-    position: fixed;
-    z-index: 9999;
-    padding: 15px;
-}
-
-.hamburger:hover {
-    cursor: pointer;
-}
-
-.hamburger div:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-.sidenav-active nav,
-
-.sidenav-active .cover {
-    -webkit-transform: translateX(225px);
-    -ms-transform: translateX(225px);
-    transform: translateX(225px);
-}
-
-.sidenav-active .hamburger {
-    -webkit-transform: translateX(180px);
-    -ms-transform: translateX(180px);
-    transform: translateX(180px);
-    color: #000000;
-
-}
-
-.main {
-    -webkit-transition: margin-left .3s;
-    transition: margin-left .3s;
-}
-
-.sidenav-active .main {
-    margin-left: var(225px);
-}
 
 
 /*WORDS REVOLVER*/
@@ -737,4 +745,11 @@ animation-delay: 15s;
     }
 
 
+}
+
+@media all and (orientation: landscape) {
+    .nav__social{
+        font-size: 1vmin;
+      
+    }
 }

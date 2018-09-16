@@ -293,8 +293,10 @@ i {
     height: 40vmin;
     border: 2px dashed white;
     border-radius: 50%;
-    background: url('./img/me.jpg') 60% 40% no-repeat;
-
+    background: url('./img/me.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    background-size: cover;
     grid-column: 1/2;
     grid-row: 2/4;
 
@@ -331,7 +333,7 @@ i {
 }
 
 .about__social {
-    font-size: 1vh;
+    font-size: calc(var(--normal-font) / 2);
     text-align: center;
 }
 
@@ -637,8 +639,8 @@ animation-delay: 15s;
 
 @media only screen and (max-width: 1500px) {
     nav {
-         font-size: var(--normal-font);
-         
+        font-size: var(--normal-font);
+
     }
 }
 

@@ -4,7 +4,7 @@ Pawel Krystkiewicz
 Working URLs for tests - tested using http-server
 Use your own server path to files!
 */
-var url = 'static/paleo.pdf';
+var url = './static/paleo.pdf';
 //var url = "https://cdn.mozilla.net/pdfjs/tracemonkey.pdf";
 
 /*
